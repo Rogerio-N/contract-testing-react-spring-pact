@@ -1,0 +1,2 @@
+INSERT INTO BOOKS (title, author, description, created_at, updated_at) VALUES ('Eloquent JavaScript, Third Edition', 'Marijn Haverbeke', 'JavaScript lies at the heart of almost every modern web application, from social apps like Twitter to browser-based game frameworks like Phaser and Babylon', '2025-10-10 15:00:00', '2025-10-10 15:00:00')
+INSERT INTO BOOKS (title, author, description, created_at, updated_at) VALUES ('Practical Modern JavaScript', 'Nicolás Bevacqua', null, '2025-10-10 10:00:00', '2025-10-10 13:00:00')
