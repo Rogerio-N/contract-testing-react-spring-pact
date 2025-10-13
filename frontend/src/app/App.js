@@ -1,23 +1,16 @@
+import { getAllBooks } from '../services/BookService'
 import './App.css'
 import { useEffect, useState } from 'react'
 
 function App() {
     const [isLoading, setIsLoading] = useState(true)
     const [books, setBooks] = useState([])
-    const baseUrl = 'http://localhost:8080'
 
     useEffect(() => {
-        fetch(`${baseUrl}/v1/books`)
-            .then((response) => {
-                if (response.ok) {
-                    return response.json()
-                }
-                throw response
-            })
-            .then((data) => {
-                setBooks(data)
-                setIsLoading(false)
-            })
+        getAllBooks().then((data) => {
+            setBooks(data)
+            setIsLoading(false)
+        })
     }, [])
 
     return (
