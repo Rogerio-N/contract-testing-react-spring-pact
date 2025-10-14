@@ -17,6 +17,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "jest",
+    "test:publish": "pact-broker publish ./src/test/pacts --consumer-app-version=0.0.1 --auto-detect-version-properties --broker-base-url=http://localhost:9292",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -42,9 +43,13 @@
     "@babel/preset-env": "^7.28.3",
     "@babel/preset-react": "^7.27.1",
     "@pact-foundation/pact": "^16.0.0",
+    "@pact-foundation/pact-cli": "^16.1.5",
     "babel-jest": "^30.2.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.5.1",
     "react-test-renderer": "^19.2.0"
+  },
+  "config": {
+    "pact_do_not_track": true
   }
 }
