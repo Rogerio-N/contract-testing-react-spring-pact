@@ -17,7 +17,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "jest",
-    "test:publish": "pact-broker publish ./src/test/pacts --consumer-app-version=0.0.1 --auto-detect-version-properties --broker-base-url=http://localhost:9292",
+    "test:publish": "pact-broker publish ./src/test/pacts --consumer-app-version=0.0.3 --auto-detect-version-properties --broker-base-url=http://localhost:9292",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

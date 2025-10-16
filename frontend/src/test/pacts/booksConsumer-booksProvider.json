@@ -4,8 +4,13 @@
   },
   "interactions": [
     {
-      "description": "a request to list all books with all fields filled",
+      "description": "a request to list all books",
       "pending": false,
+      "providerStates": [
+        {
+          "name": "all fields are filled"
+        }
+      ],
       "request": {
         "method": "GET",
         "path": "/v1/books"
@@ -48,8 +53,13 @@
       "type": "Synchronous/HTTP"
     },
     {
-      "description": "a request to list all books with only required fields filled",
+      "description": "a request to list all books",
       "pending": false,
+      "providerStates": [
+        {
+          "name": "only required fields are filled"
+        }
+      ],
       "request": {
         "method": "GET",
         "path": "/v1/books"

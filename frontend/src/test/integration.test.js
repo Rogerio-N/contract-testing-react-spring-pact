@@ -22,7 +22,8 @@ describe('GET /v1/books', () => {
         }
         await provider
             .addInteraction()
-            .uponReceiving('a request to list all books with all fields filled')
+            .given('all fields are filled')
+            .uponReceiving('a request to list all books')
             .withRequest('GET', '/v1/books')
             .willRespondWith(200, (builder) => {
                 builder.jsonBody(Matchers.eachLike(booksExpectation))
@@ -46,9 +47,8 @@ describe('GET /v1/books', () => {
         }
         await provider
             .addInteraction()
-            .uponReceiving(
-                'a request to list all books with only required fields filled'
-            )
+            .given('only required fields are filled')
+            .uponReceiving('a request to list all books')
             .withRequest('GET', '/v1/books')
             .willRespondWith(200, (builder) => {
                 builder.jsonBody(Matchers.eachLike(booksExpectation))
